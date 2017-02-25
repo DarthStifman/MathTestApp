@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MathTestApp"
         mc:Ignorable="d"
-        Title="Test App" Height="350" Width="450">
+        Title="Test App" Height="460" Width="630">
     <Grid>        
         
         <Grid.ColumnDefinitions>
@@ -21,9 +21,9 @@
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <Menu>
                 <MenuItem Header="Menu">
-                    <MenuItem Header="Manage"></MenuItem>
+                    <MenuItem Name="MenuManage" Header="Manage"></MenuItem>
                     <Separator />
-                    <MenuItem Header="Exit"></MenuItem>
+                    <MenuItem Name="MenuExit" Header="Exit"></MenuItem>
                 </MenuItem>
                 
             </Menu>
@@ -31,14 +31,14 @@
         
         <StackPanel Grid.Row="1" Orientation="Horizontal">            
             
-            <Label FontSize="25"  Margin="10,5,0,0">Question #</Label>
+            <Label Name="LbQuestionNumber"  FontSize="35"  Margin="10,5,0,0">Question #</Label>
             
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Orientation="Vertical">           
-            <Label FontSize="15"  Margin="10,40,0,0">Calculate example: </Label>
-            <TextBox Margin="10"  Height="80" Width="400" ></TextBox>
-            <Button Height="20" Width="80" Margin="0,50,0,0" Click="Button_Click">Next</Button>
+        <StackPanel Grid.Row="2" Orientation="Vertical">
+            <Label Name="LbQuestion" FontSize="25"  Margin="10,40,0,0">Calculate example: </Label>
+            <TextBox Name="TbAnswer" Margin="10"  Height="120" Width="600" ></TextBox>
+            <Button Name="BtnConfirm" Height="40" Width="110" FontSize="20" Margin="0,50,0,0" Click="Button_Click">Next</Button>
         </StackPanel>
         
     </Grid>

@@ -21,13 +21,16 @@ namespace MathTestApp
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
-            questionNumber = 1;
+        {                      
 
             InitializeComponent();
+
+            LbQuestionNumber.Content = "Question #1";
+            LbQuestion.Content = questionText + Questions[0][0];
         }
 
-        public int questionNumber;
+        public int questionNumber = 1;
+        public string questionText = "Solve the mathematical example: ";
 
         public List<string[]> Questions = new List<string[]>
         {
@@ -41,6 +44,7 @@ namespace MathTestApp
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ++questionNumber;
+            LbQuestionNumber.Content = "Question #" + questionNumber;
         }
     }
 }
