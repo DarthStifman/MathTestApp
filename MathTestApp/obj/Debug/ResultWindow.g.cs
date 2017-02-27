@@ -40,30 +40,6 @@ namespace MathTestApp {
     /// </summary>
     public partial class ResultWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
-        
-        #line 35 "..\..\ResultWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label LbAnswer;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 36 "..\..\ResultWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label LbCorrectResult;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 37 "..\..\ResultWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label LbTime;
-        
-        #line default
-        #line hidden
-        
         private bool _contentLoaded;
         
         /// <summary>
@@ -95,15 +71,6 @@ namespace MathTestApp {
             switch (connectionId)
             {
             case 1:
-            this.LbAnswer = ((System.Windows.Controls.Label)(target));
-            return;
-            case 2:
-            this.LbCorrectResult = ((System.Windows.Controls.Label)(target));
-            return;
-            case 3:
-            this.LbTime = ((System.Windows.Controls.Label)(target));
-            return;
-            case 4:
             
             #line 41 "..\..\ResultWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click);

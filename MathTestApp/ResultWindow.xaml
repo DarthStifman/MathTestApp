@@ -32,13 +32,13 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical">
-            <Label Margin="2">Correct/Wrong</Label>
-            <Label Margin="2">Correct result</Label>
-            <Label Margin="2">Question time</Label>
+            <Label Name="LbAnswer" Margin="2">Correct/Wrong</Label>
+            <Label Name="LbCorrectResult" Margin="2">Correct result</Label>
+            <Label Name="LbTime" Margin="2">Question time</Label>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
-            <Button Height="20" Width="70" Margin="-5,0,0,0">Ok</Button>
+            <Button Height="20" Width="70" Margin="-5,5,0,0" Click="Button_Click">Ok</Button>
         </StackPanel>
     </Grid>
 </Window>

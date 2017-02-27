@@ -43,6 +43,9 @@ namespace MathTestApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            ResultWindow newResultWindow = new ResultWindow();
+            newResultWindow.ShowDialog();
+
             ++questionNumber;
             LbQuestionNumber.Content = "Question #" + questionNumber;
         }
