@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MathTestApp"
         mc:Ignorable="d"
-        Title="Test App" Height="460" Width="630">
+        Title="Test App" Height="460" Width="630" Closing="Window_Closing">
     <Grid>        
         
         <Grid.ColumnDefinitions>
@@ -23,7 +23,7 @@
                 <MenuItem Header="Menu">
                     <MenuItem Name="MenuManage" Header="Manage"></MenuItem>
                     <Separator />
-                    <MenuItem Name="MenuExit" Header="Exit"></MenuItem>
+                    <MenuItem Name="MenuExit" Header="Exit" Click="MenuExit_Click"></MenuItem>
                 </MenuItem>
                 
             </Menu>
@@ -37,7 +37,7 @@
 
         <StackPanel Grid.Row="2" Orientation="Vertical">
             <Label Name="LbQuestion" FontSize="25"  Margin="10,40,0,0">Calculate example: </Label>
-            <TextBox Name="TbAnswer" Margin="10"  Height="120" Width="600" ></TextBox>
+            <TextBox Name="TbAnswer" Margin="10"  Height="120" Width="600" FontSize="20"></TextBox>
             <Button Name="BtnConfirm" Height="40" Width="110" FontSize="20" Margin="0,50,0,0" Click="Button_Click">Next</Button>
         </StackPanel>
         

@@ -19,13 +19,26 @@ namespace MathTestApp
     /// </summary>
     public partial class ResultWindow : Window
     {
+        
         public ResultWindow()
-        {
+        {            
             InitializeComponent();
+            
         }
+
+        public string userAnswer = "";
+        public string correctAnswer = "";
+
+        public void ChangeLabels()
+        {
+            LbAnswer.Content = userAnswer;
+            LbCorrectResult.Content = correctAnswer;
+        }
+        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             Close();
         }
     }
