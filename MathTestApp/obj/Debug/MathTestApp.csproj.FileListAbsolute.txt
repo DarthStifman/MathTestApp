@@ -28,3 +28,5 @@ C:\Users\Stifman\Documents\Visual Studio 2015\Projects\MathTestApp\MathTestApp\o
 C:\Users\Stifman\Documents\Visual Studio 2015\Projects\MathTestApp\MathTestApp\obj\Debug\MathTestApp.g.resources
 C:\Users\Stifman\Documents\Visual Studio 2015\Projects\MathTestApp\MathTestApp\obj\Debug\MathTestApp.Properties.Resources.resources
 C:\Users\Stifman\Documents\Visual Studio 2015\Projects\MathTestApp\MathTestApp\obj\Debug\MathTestApp.csproj.GenerateResource.Cache
+C:\Users\David\documents\visual studio 2015\Projects\MathTestApp\MathTestApp\obj\Debug\ResultWindow.g.cs
+C:\Users\David\documents\visual studio 2015\Projects\MathTestApp\MathTestApp\obj\Debug\ResultWindow.baml

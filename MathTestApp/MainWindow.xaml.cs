@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -41,7 +42,7 @@ namespace MathTestApp
             new string[] {"250 : 5", "50"},
             new string[] {"1024 : 4", "256"},
             new string[] {"14 x 2", "28"},
-            new string[] {"112 : 2", "66"},
+            new string[] {"2x=16", "x=8"},
             new string[] {"5136 + 211", "5347"},
             new string[] {"32174 - 3945", "28229"},
             new string[] {"8645213 - 432148", "8213065"},
@@ -54,11 +55,12 @@ namespace MathTestApp
 
             
             string currentResult = Questions[questionNumber - 1][1];
+            Regex.Replace(currentResult, @"\s+", "");
             newResultWindow.correctAnswer = currentResult;
 
             if (TbAnswer.Text != "")
             {
-                if (Convert.ToInt32(currentResult) == Convert.ToInt32(TbAnswer.Text))
+                if (currentResult == Regex.Replace(TbAnswer.Text, @"\s+", ""))
                 {
                     newResultWindow.userAnswer = "Correct!";
                 }
@@ -91,13 +93,14 @@ namespace MathTestApp
             }            
                                     
         }
-        
+
+       
         private void MenuExit_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Do you want to close the app?", "Exit", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-            {
-                Close();
-            }
+            //if (MessageBox.Show("Do you want to close the app?", "Exit", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            //{
+            Close();
+            //}
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -107,6 +110,15 @@ namespace MathTestApp
                 e.Cancel = true;
             }
             
+        }
+
+        //Prepnuti uvidni obrazovky. Start testu.
+        private void BtnStart_Click(object sender, RoutedEventArgs e)
+        {
+            StpWelcomeLabel.Visibility = Visibility.Collapsed;
+            StpStartButton.Visibility = Visibility.Collapsed;
+            StpQuestionLabel.Visibility = Visibility.Visible;
+            StpBody.Visibility = Visibility.Visible;
         }
     }
 }
