@@ -1,0 +1,51 @@
+﻿<Window x:Class="MathTestApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MathTestApp"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Test App" Height="460" Width="630" Closing="Window_Closing">
+    <Grid>        
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>            
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Name="StpMenu" Grid.Row="0" Orientation="Horizontal">
+            <Menu>
+                <MenuItem Header="Menu">
+                    <MenuItem Name="MenuManage" Header="Manage"></MenuItem>
+                    <Separator />
+                    <MenuItem Name="MenuExit" Header="Exit" Click="MenuExit_Click"></MenuItem>
+                </MenuItem>                
+            </Menu>
+        </StackPanel>
+
+        <StackPanel Name="StpWelcomeLabel" Grid.Row="1" Orientation="Horizontal" Visibility="Visible">
+            <Label Name="LbWelcome"  FontSize="55"  Margin="180,50,0,0">Welcome</Label>
+        </StackPanel>
+
+        <StackPanel Name="StpStartButton" Grid.Row="2" Orientation="Vertical" Visibility="Visible">            
+            <Button Name="BtnStart" Height="60" Width="150" FontSize="20" Margin="180,80,0,0" Click="BtnStart_Click">Start Test</Button>
+        </StackPanel>
+
+        <StackPanel Name="StpQuestionLabel" Grid.Row="1" Orientation="Horizontal" Visibility="Collapsed">
+            <Label Name="LbQuestionNumber"  FontSize="35"  Margin="10,5,0,0">Question #</Label>            
+        </StackPanel>
+
+        <StackPanel Name="StpBody" Grid.Row="2" Orientation="Vertical" Visibility="Collapsed">
+            <Label Name="LbQuestion" FontSize="25"  Margin="10,40,0,0">Calculate example: </Label>
+            <TextBox Name="TbAnswer" Margin="10"  Height="120" Width="600" FontSize="20"></TextBox>
+            <Button Name="BtnConfirm" Height="40" Width="110" FontSize="20" Margin="0,50,0,0" Click="Button_Click">Next</Button>
+        </StackPanel>
+        
+    </Grid>
+</Window>
