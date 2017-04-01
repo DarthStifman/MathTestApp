@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -120,5 +122,58 @@ namespace MathTestApp
             StpQuestionLabel.Visibility = Visibility.Visible;
             StpBody.Visibility = Visibility.Visible;
         }
+
+#region
+
+        //string path = "";
+
+        //OpenFileDialog ofd = new OpenFileDialog();
+
+        //ofd.Filter = "CSV files (*.jpg)|*.jpg";
+        //bool? result = ofd.ShowDialog();
+
+        //if (result.HasValue && result.Value == true)
+        //{
+        //    path = ofd.FileName;
+        //}
+
+        //byte[] data = File.ReadAllBytes(path);
+
+        //myImage.Source = LoadImage(data);
+
+        //var image = new BitmapImage(new Uri(path));
+
+        //images.Add(image);
+
+        //MessageBox.Show("You can choose from " + (images.Count) + " images.");
+
+
+        //private void btnShow_Click(object sender, RoutedEventArgs e)
+        //{
+
+        //    int imageNumber = Convert.ToInt32(tbChooseImage.Text);
+        //    myImage.Source = images[imageNumber - 1];
+        //}
+
+
+        private static BitmapImage LoadImage(byte[] imageData)
+        {
+            if (imageData == null || imageData.Length == 0) return null;
+            var image = new BitmapImage();
+            using (var mem = new MemoryStream(imageData))
+            {
+                mem.Position = 0;
+                image.BeginInit();
+                image.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
+                image.CacheOption = BitmapCacheOption.OnLoad;
+                image.UriSource = null;
+                image.StreamSource = mem;
+                image.EndInit();
+            }
+            image.Freeze();
+            return image;
+        }
+#endregion
+
     }
 }
